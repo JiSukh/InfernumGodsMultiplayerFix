@@ -1,0 +1,26 @@
+Test build of multiplayer fixes for Calamity Infernum Mode and Calamity: Wrath of the Gods.
+Everyone on the server needs this mod. Built for Infernum 2.0.1.35 and Wrath of the Gods 1.2.31.
+
+Infernum:
+- Stops duplicate boss projectiles: about 30 Infernum attacks spawn projectiles on every client as well as the server, so they fired 2-3x in multiplayer.
+- Stops ghost enemies: King Slime's death slimes/Ninja, Duke Fishron's Sharkrons and the Profaned Guardians' crystal were also spawned on each client, unsynced.
+- Golem: repairs its fist/head links on clients instead of erroring every frame.
+- Providence: arena walls now hold every player in multiplayer (Infernum only did this in singleplayer).
+- Hazards for everyone: Cultist/Ravager/Guardian borders, Brimstone's rose ring, Calamitas Clone and Polterghast's Madness circles, Crabulon's claw slam and SCal's leave-arena kill now affect every player, not just the boss's target.
+- Boss targeting: ~20 bosses that stuck to one player all fight now re-pick each attack - weighted by class (default melee 7 / ranged 5 / magic 4 / rogue 5 / summoner 3) or simply alternating.
+- Boss fight lives (default 1, 0 = unlimited): out of lives = spectate until the fight ends.
+- Spectate a living teammate while dead ([ and ] to switch).
+- Boss target marker: the boss's head icon floats over whoever it's targeting.
+- Simple boss health scaling: single-player health x (1 + 50% per extra player), adjustable.
+
+Test commands: /mptest list | boss <n or name> | next | kill | gather, and /mpgod.
+- Crash guard: errors in Infernum boss/projectile AI are caught and logged ([InfernumGuard]) instead of crashing the game or server.
+
+Wrath of the Gods:
+- Avatar of Emptiness: fixed a network sync bug that misread boss data on clients.
+- Avatar of Emptiness: Frost Screen Smash now works in multiplayer (server picks the telegraphs).
+- Avatar of Emptiness: Antishadow Onslaught weapons and Rubble Gravity Slam portals no longer spawn once per player.
+- Mars: Electric Shockwave now pushes players back in multiplayer.
+
+Diagnostics:
+- Logs boss state once a second to client.log / server.log ([BossTrace]) so host and client logs can be compared.

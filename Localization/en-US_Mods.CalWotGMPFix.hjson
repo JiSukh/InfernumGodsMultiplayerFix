@@ -1,0 +1,149 @@
+Keybinds: {
+	SpectatePrevious.DisplayName: Spectate previous player
+	SpectateNext.DisplayName: Spectate next player
+}
+
+Configs: {
+	BossTargeting: {
+		InfernumDefault: {
+			Label: Infernum default (stick to one player)
+			Tooltip: ""
+		}
+
+		Alternate: {
+			Label: Alternate players
+			Tooltip: ""
+		}
+
+		ClassWeighted: {
+			Label: Weighted by class
+			Tooltip: ""
+		}
+
+		Tooltip: ""
+	}
+
+	MPFixConfig: {
+		DisplayName: Multiplayer Fixes (Test)
+
+		Headers: {
+			BugFixes: Bug fixes
+			Gameplay: Multiplayer gameplay
+			Diagnostics: Diagnostics
+		}
+
+		EnableFrostScreenSmash: {
+			Label: WotG - Avatar Frost Screen Smash in multiplayer
+			Tooltip: WotG skips this attack in multiplayer. When on, the server picks the telegraphs and clients draw what it sends.
+		}
+
+		EnableShockwavePush: {
+			Label: WotG - Mars shockwave pushes players in multiplayer
+			Tooltip: Each client pushes its own player away from Mars' Electric Shockwave, like singleplayer.
+		}
+
+		EnableInfernumDuplicateFix: {
+			Label: Infernum - stop duplicate projectiles and ghost enemies
+			Tooltip: Some Infernum attacks spawn projectiles/enemies on every client as well as the server, so they fire 2-3 times or leave enemies only one player can see. This stops the client copies.
+		}
+
+		EnableInfernumCrashGuard: {
+			Label: Infernum - crash guard
+			Tooltip: Catches errors thrown by Infernum boss and projectile AI (logged as [InfernumGuard]) instead of letting them crash the game or server.
+		}
+
+		EnableProvidenceArena: {
+			Label: Infernum - Providence arena walls in multiplayer
+			Tooltip: Infernum only keeps players inside Providence's arena in singleplayer. When on, every player near Providence is kept inside it.
+		}
+
+		EnableWotGDuplicateFix: {
+			Label: WotG - stop duplicate Avatar projectiles
+			Tooltip: Avatar's Antishadow Onslaught weapons and Rubble Gravity Slam portals are spawned on every client as well as the server. This stops the client copies.
+		}
+
+		EnableWotGSyncSmoothing: {
+			Label: WotG - smooth boss sync (sounds/effects)
+			Tooltip: When the server syncs Avatar, Nameless Deity or Mars, your game's attack timer was rewound a few frames and replayed, so sounds and effects could play twice or stack. When on, small rewinds are ignored.
+		}
+
+		EnableSharedHazards: {
+			Label: Infernum - boss hazards apply to every player
+			Tooltip: Cultist/Ravager/Guardian borders, Brimstone's rose ring, Calamitas Clone and Polterghast's Madness circles, Crabulon's claw slam and SCal's leave-arena kill normally only affect the boss's current target. When on, they affect everyone.
+		}
+
+		TargetingMode: {
+			Label: Infernum - how bosses pick targets
+			Tooltip:
+				'''
+				For ~20 Infernum bosses that normally stick to one player all fight. Applied each time the boss starts a new attack (Providence and DoG every 10 seconds).
+				Alternate: next player in turn.
+				Weighted by class: random pick using the class weights below (based on the weapon each player is using).
+				'''
+		}
+
+		MeleeWeight: {
+			Label: Class weight - melee
+			Tooltip: Relative chance a melee player is picked. Melee 7 vs summoner 3 = melee gets 70% of attacks.
+		}
+
+		RangedWeight: {
+			Label: Class weight - ranged
+			Tooltip: Relative chance a ranged player is picked.
+		}
+
+		MagicWeight: {
+			Label: Class weight - magic
+			Tooltip: Relative chance a mage is picked.
+		}
+
+		RogueWeight: {
+			Label: Class weight - rogue
+			Tooltip: Relative chance a rogue is picked.
+		}
+
+		SummonerWeight: {
+			Label: Class weight - summoner
+			Tooltip: Relative chance a summoner is picked.
+		}
+
+		OtherClassWeight: {
+			Label: Class weight - other
+			Tooltip: Bard, healer and any other class.
+		}
+
+		BossFightLives: {
+			Label: Boss fight lives
+			Tooltip: How many times each player can die per boss fight before they have to spectate until it ends. 0 = unlimited (normal respawning).
+		}
+
+		OverrideBossHealthScaling: {
+			Label: Use simple boss health scaling
+			Tooltip: Replaces each mod's own multiplayer boss health scaling with: single-player health x (1 + the % below for each extra player).
+		}
+
+		BossHealthPerExtraPlayer: {
+			Label: Boss health per extra player (%)
+			Tooltip: 50 = 2 players get 1.5x single-player boss health, 3 players get 2x. Takes effect for bosses summoned after changing it.
+		}
+
+		EnableBossTrace: {
+			Label: Boss trace logging
+			Tooltip: Logs boss position, life and attack state once a second to client.log / server.log for desync hunting.
+		}
+	}
+
+	MPFixClientConfig: {
+		DisplayName: Multiplayer Fixes (Test) - personal
+
+		SpectateWhenDead: {
+			Label: Spectate a teammate while dead
+			Tooltip: In multiplayer, your camera follows a living teammate while you're dead. Use [ and ] (rebindable in Controls) to switch.
+		}
+
+		ShowTargetMarker: {
+			Label: Show boss target marker
+			Tooltip: Shows the head icon of each boss above the player it's currently targeting (red over you, orange over teammates).
+		}
+	}
+}

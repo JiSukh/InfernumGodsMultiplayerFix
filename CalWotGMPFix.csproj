@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Standard tModLoader mod project, for opening in Visual Studio / Rider. -->
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>CalWotGMPFix</AssemblyName>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,7 @@
+displayName = Calamity, WotG & Infernum Multiplayer Fixes (Test)
+author = Loa
+version = 0.6.1
+side = Both
+modReferences = CalamityMod, NoxusBoss, Luminance
+weakReferences = InfernumMode
+buildIgnore = *.csproj, bin\*, obj\*, *.md, .git*, .git\*, LICENSE
