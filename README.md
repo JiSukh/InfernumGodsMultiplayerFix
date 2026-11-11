@@ -1,6 +1,14 @@
 
 # WORK IN PROGRESS, NOT FINISHED
 
+# Disclosures
+
+This project is *HEAVILY* AI coded, and mostly made as an experiment with a friend. 
+
+We know that neither Infernum nor WoTG isn't meant to be played in multiplayer. We might also split this into different mods, depending on demand and/or needs.
+
+Don't bother the original mod creators if you find issues with this mod.
+
 # InfernumGodsMultiplayerFix
 
 Fix for Calamity Infernum and Wrath of The Gods bosses and general bugs.
